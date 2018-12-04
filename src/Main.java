@@ -1,3 +1,4 @@
+import inventory.Item;
 import saadman.boilerplate.BP;
 
 /*********************************************
@@ -38,18 +39,21 @@ public class Main {
 	public static void main(String[] args) {
 		BP.pln("TEST");
 		
-		Inventory test = new Inventory.InventoryBuilder()
+		Item test = new Item.ItemBuilder()
 									  .ID("M11")
 									  .name("Mat")
 									  .category("Flooring")
 									  .picture(123)
 									  .averagePrice(0)
-									  .quantityRemaining(0)
+									  .quantity(0)
 									  .build();
 		
-		test.buyInventory(10, 10);
-		test.sellInventory(5);
-		test.buyInventory(10, 15);
+//		test.addItem(10, 10);
+//		test.subtractItem(5);
+//		test.addItem(10, 15);
+		
+		BP.pln(test.toString());
+		
 		
 	}
 		
